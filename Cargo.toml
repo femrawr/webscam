@@ -1,0 +1,21 @@
+[package]
+name = "webscam"
+version = "1.0.0"
+edition = "2024"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true
+panic = "abort"
+
+[dependencies.nokhwa]
+version = "0.10.10"
+default-features = false
+features = ["input-msmf", "decoding"]
+
+[dependencies.image]
+version = "0.25.9"
+default-features = false
+features = ["jpeg"]
